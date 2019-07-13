@@ -1,4 +1,4 @@
-##SpringBoot 2.1 with Flyway 5.2.4 Java Callbacks
+## SpringBoot 2.1 with Flyway 5.2.4 Java Callbacks
 
 In this mini project we are experimenting with an approach to run code hooked to flyway callbacks.
 
