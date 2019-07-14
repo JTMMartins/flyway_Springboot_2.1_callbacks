@@ -1,24 +1,21 @@
-
 package com.noshio.flyway.flywaycallback;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.JdbcOperations;
-import org.springframework.stereotype.Component;
 
 @Slf4j
-@Component
-public class UserCount {
+public final class UserCount {
 
-    public void beforeEachMigrate(JdbcOperations jdbcTemplate) {
-        Long userCount = jdbcTemplate.queryForObject("select count(*) from user_user", Long.class);
-        log.info("++++++++ THE NUMBER OF USER BEFORE MIGRATE IS {} ++++++++", userCount);
-        log.info("Finished executing BeforeMigrate...");
-    }
+    private UserCount(){}
 
-    public void afterEachMigration(JdbcOperations jdbcTemplate){
-        Long userCount = jdbcTemplate.queryForObject("select count(*) from user_user", Long.class);
-        log.info("++++++++ THE NUMBER OF USER AFTER EACH MIGRATE IS {} +++++++", userCount);
-        log.info("Finished executing AfterMigrate...");
+    public static Long count(JdbcOperations jdbcTemplate){
+        Long userCount = 0L;
+        try {
+            userCount = jdbcTemplate.queryForObject("select count(*) from user_user", Long.class);
+        }catch (Exception ex){
+            log.error("Exception fetching from database");
+        }
+        return userCount;
     }
 }
 

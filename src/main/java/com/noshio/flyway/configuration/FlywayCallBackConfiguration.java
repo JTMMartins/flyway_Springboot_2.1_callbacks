@@ -16,4 +16,7 @@ public class FlywayCallBackConfiguration {
         return new FlywayCallBack(jdbcTemplate);
     }
 
+
+
 }
+
