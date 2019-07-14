@@ -1,7 +1,7 @@
-package com.noshio.flyway.flywaycallback.before;
+package com.noshio.flyway.flywaycallbackstrategy.before;
 
-import com.noshio.flyway.flywaycallback.CallBackStrategy;
-import com.noshio.flyway.flywaycallback.UserCount;
+import com.noshio.flyway.flywaycallbackstrategy.CallBackStrategy;
+import com.noshio.flyway.flywaycallbackstrategy.UserCount;
 import lombok.extern.slf4j.Slf4j;
 import org.flywaydb.core.api.callback.Context;
 import org.flywaydb.core.api.callback.Event;

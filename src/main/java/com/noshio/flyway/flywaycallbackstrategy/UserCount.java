@@ -1,4 +1,4 @@
-package com.noshio.flyway.flywaycallback;
+package com.noshio.flyway.flywaycallbackstrategy;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.JdbcOperations;
