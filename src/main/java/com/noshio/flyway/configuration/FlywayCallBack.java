@@ -33,7 +33,7 @@ public class FlywayCallBack implements Callback {
             case "AFTER_VALIDATE":
                 return true;
             default:
-                return false;
+                return true;
         }
     }
 
