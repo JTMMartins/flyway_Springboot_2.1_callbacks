@@ -10,3 +10,4 @@ mvnw.cmd
 .settings/org.eclipse.m2e.core.prefs
 .settings/org.eclipse.jdt.apt.core.prefs
 .settings/org.eclipse.jdt.core.prefs
+.project
