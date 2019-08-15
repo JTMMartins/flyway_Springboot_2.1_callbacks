@@ -26,6 +26,7 @@ public class FlywayCallBack implements Callback {
 
     @Override
     public boolean supports(Event event, Context context) {
+        int a =0;
         switch (event.name()) {
             case "BEFORE__MIGRATE":
             case "BEFORE_VALIDATE":
